@@ -1,8 +1,8 @@
 ## dynamic-table-tools
+
 根据指定数据源库表自动创建doris库表
 
-
-## 前置条件
+## 使用
 
 ### 1. 下载并安装JDK1.8
 
@@ -12,9 +12,13 @@
 
 [download maven 3.6.3](https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz)
 
-### 3. 配置参数
+### 3. 下载代码
 
-#### 3.1 配置dynamic-tools.conf
+```text
+git clone https://github.com/caoliang-web/dynamic-table-tools.git
+```
+
+### 4. 配置参数
 
 ```java
 source_type=mysql
@@ -57,7 +61,7 @@ table_conf={"replication_num":"1"}
 
 
 
-### 4. 基本使用
-git clone https://github.com/caoliang-web/dynamic-table-tools.git
-
+### 5. 执行脚本
+```
 sh flink-tools.sh
+```
