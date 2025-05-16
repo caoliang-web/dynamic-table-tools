@@ -37,23 +37,23 @@ table_conf={"replication_num":"1"}
 ```
 
 
-| 参数名                    | 参数值                                       |
-|------------------------|-------------------------------------------|
-| source_type            | 来源                                        |
-| source_ip              | ip                                        |
-| source_port            | 端口                                        |
-| source_user            | 用户名                                       |
-| source_password        | 密码                                        |
-| source_database        | 数据库                                       |
-| source_including_table | 需要同步的 MySQL 表，可以使用`｜`分隔多个表，并支持正则表达式。比如：table1 |
-| source_excluding_table | 不需要同步的表，用法同上。                             |
-| target_user            | doris用户名                                  |
-| target_password        | doris密码                                   |
-| target_database        | 指定doris数据库名称                              |
-| target_url             | jdbc:mysql://127.0.0.1:9030               |
-| table_prefix           | Doris 表前缀名，例如 --table-prefix ods_|
-| table_suffix           | 同上，Doris 表的后缀名|
-| table_conf             | Doris 表的配置项，即 properties 中包含的内容（其中 table-buckets 例外，非 properties 属性）。例如{"replication_num":"1","table-buckets":"tbl1:10,tbl2:20,a.:30,b.:40,.*:50","table-partitions":"tbl1:dt_column:month,tb2:dt_column:day","convert-uniq-to-pk":"true"} 表示按照正则表达式顺序指定不同表的 buckets 数量，如果没有匹配到则采用 BUCKETS AUTO 建表                   |
+| 参数名                    | 参数值                                                                                                                                                                                                                                                                                                                  |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| source_type            | 来源                                                                                                                                                                                                                                                                                                                   |
+| source_ip              | ip                                                                                                                                                                                                                                                                                                                   |
+| source_port            | 端口                                                                                                                                                                                                                                                                                                                   |
+| source_user            | 用户名                                                                                                                                                                                                                                                                                                                  |
+| source_password        | 密码                                                                                                                                                                                                                                                                                                                   |
+| source_database        | 数据库                                                                                                                                                                                                                                                                                                                  |
+| source_including_table | 需要同步的 MySQL 表，可以使用`｜`分隔多个表，并支持正则表达式。比如：table1                                                                                                                                                                                                                                                                        |
+| source_excluding_table | 不需要同步的表，用法同上。                                                                                                                                                                                                                                                                                                        |
+| target_user            | doris用户名                                                                                                                                                                                                                                                                                                             |
+| target_password        | doris密码                                                                                                                                                                                                                                                                                                              |
+| target_database        | 指定doris数据库名称                                                                                                                                                                                                                                                                                                         |
+| target_url             | jdbc:mysql://127.0.0.1:9030                                                                                                                                                                                                                                                                                          |
+| table_prefix           | Doris 表前缀名，例如 --table-prefix ods_                                                                                                                                                                                                                                                                                    |
+| table_suffix           | 同上，Doris 表的后缀名                                                                                                                                                                                                                                                                                                       |
+| table_conf             | Doris 表的配置项，即 properties 中包含的内容（其中 table-buckets,table-partitions,convert-uniq-to-pk 例外，非 properties 属性）。例如{"replication_num":"1","table-buckets":"tbl1:10,tbl2:20,a.:30,b.:40,.*:50","table-partitions":"tbl1:dt_column:month,tb2:dt_column:day","convert-uniq-to-pk":"true"} 表示按照正则表达式顺序指定不同表的 buckets 数量，如果没有匹配到则采用 BUCKETS AUTO 建表 |
 
 
 
